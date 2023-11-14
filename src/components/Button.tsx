@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import "../index.css";
-import "./Button.css";
+import "./Button.module.css";
 
 export const Button = () => {
 

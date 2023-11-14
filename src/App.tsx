@@ -1,5 +1,5 @@
 import './App.css'
-import { Button } from '@kamrade/react-calendar';
+import { Button } from './components';
 
 function App() {
   return (
