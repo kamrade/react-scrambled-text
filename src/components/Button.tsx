@@ -1,9 +1,13 @@
-import { useCallback } from 'react';
+import { useCallback, useState } from 'react';
+import "../index.css";
 
 export const Button = () => {
 
+  const [ counter, setCounter ] = useState<number>(0);
+
   const onClick = useCallback(() => {
-    console.log("Vite + React + TypeScript + TailwindCSS");
+    setCounter(counter + 1);
+    console.log("Vite + React + TypeScript + TailwindCSS", counter);
   }, []);
 
   return (
