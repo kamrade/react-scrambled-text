@@ -24,13 +24,15 @@
     "build": "tsc && vite build",
     "prepare": "npm run build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest --root src/"
   },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@testing-library/react": "14.1.2",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
@@ -40,10 +42,12 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "identity-obj-proxy": "3.0.0",
+    "jsdom": "23.0.1",
     "ts-node": "10.9.2",
     "typescript": "^5.0.2",
     "vite": "^4.4.5",
     "vite-plugin-dts": "^3.6.3",
-    "vite-plugin-lib-inject-css": "^1.3.0"
+    "vite-plugin-lib-inject-css": "^1.3.0",
+    "vitest": "1.1.0"
   }
 }

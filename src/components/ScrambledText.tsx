@@ -1,3 +1,10 @@
+/*
+//
+// - [ ] use declarative approach (get rid of useRef)
+//
+*/
+
+
 import React, { useRef, useEffect } from 'react';
 import { ScrambledTextProps } from "./ScrambledText.props";
 import s from './ScrambledText.module.css';
@@ -15,7 +22,7 @@ export const ScrambledText: React.FC<ScrambledTextProps> = ({ value, slideLength
   // Entry point
   useEffect(() => next(), []);
 
-  // renderer alternative
+  // // renderer alternative
   // const nextInterval = () => {
   //   setInterval(() => {
   //     setText(value[counter]);
