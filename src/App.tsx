@@ -1,14 +1,26 @@
 import './App.css'
-import { Button } from './components';
+import { ScrambledText } from './components';
 
 function App() {
+  let scrambledValues = [
+    '[ Product design ]',
+    '[ Prototyping ]',
+    '[ Infographic ]',
+    '[ Design systems ]',
+    '[ React/Angular components ]',
+    '[ Business and system analytics ]'
+  ]
+
   return (
     <>
       <div className='App'>
-        <Button />
+        <div className="scrambledTextWrapper">
+          <ScrambledText value={scrambledValues} />
+        </div>
       </div>
     </>
-  )
+  );
+
 }
 
 export default App

@@ -1,0 +1,9 @@
+.ScrambledText {
+  opacity: .5;
+}
+
+:global {
+  .dud {
+    color: red;
+  }
+}

@@ -9,7 +9,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, 'index.ts'),
-      name: 'react-calendar',
+      name: 'react-scrambled-text',
       fileName: (format) => `index.${format}.js`
     },
     rollupOptions: {

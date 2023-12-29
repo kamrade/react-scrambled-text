@@ -1,0 +1,12 @@
+.App {
+  
+}
+
+.scrambledTextWrapper {
+  font-family: 'Archivo';
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-top: 50vh;
+  transform: translateY(-50%);
+}

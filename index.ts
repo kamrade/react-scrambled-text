@@ -1,1 +1,1 @@
-export { Button } from './src/components/Button';
+export { ScrambledText } from './src/components';
