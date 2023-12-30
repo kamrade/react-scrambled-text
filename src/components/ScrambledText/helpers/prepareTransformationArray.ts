@@ -1,4 +1,4 @@
-import type { IQueue } from './ScrambledText';
+import type { IQueue } from '../ScrambledText';
 
 // start и end существуют для того, чтоб установить в какой момент данный символ начнет анимацию
 

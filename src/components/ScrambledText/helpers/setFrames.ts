@@ -1,4 +1,4 @@
-import { IQueue } from "./ScrambledText";
+import { IQueue } from "../ScrambledText";
 import { getRandomChar } from "./getRandomChar";
 
 export const setFrames = (queue: IQueue[], chars: string, frame: number): [output: string, complete: number] => {

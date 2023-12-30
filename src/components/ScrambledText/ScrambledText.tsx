@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { ScrambledTextProps } from "./ScrambledText.props";
 import s from './ScrambledText.module.css';
-import { prepareTransformationAttay } from './prepareTransformationArray';
-import { setFrames } from './setFrames';
+import { prepareTransformationAttay } from './helpers/prepareTransformationArray';
+import { setFrames } from './helpers/setFrames';
 
 export interface IQueue {
   from: string;
