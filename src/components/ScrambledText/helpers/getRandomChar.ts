@@ -1,2 +1,4 @@
+import { getRandomNumber } from './getRandomNumber';
+
 export const getRandomChar = (chars: string) => 
-    chars[Math.floor(Math.random() * chars.length)];
+  chars[getRandomNumber(chars.length)];

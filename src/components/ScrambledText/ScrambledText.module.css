@@ -1,9 +1,133 @@
-.ScrambledText {
-  opacity: .5;
+.togo {
+  animation-duration: 2s;
+  animation-name: blinking1;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-delay: .2s;
 }
 
-:global {
-  .dud {
-    color: red;
+
+
+.togo.togo-1 {
+  animation-name: blinking2;
+  animation-delay: 1s;
+}
+
+.togo.togo-2 {
+  animation-name: blinking2;
+  animation-delay: 1s;
+}
+
+.togo.togo-3 {
+  animation-name: blinking3;
+  position: relative;
+  animation-delay: 0s;
+}
+
+.togo.togo-4 {
+  animation-name: blinking4;
+  animation-duration: 4s;
+  transition: all .2s ease-in-out;
+  position: relative;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes blinking1 {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 1;
+  }
+  12% {
+    opacity: 0;
+  }
+  14% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blinking2 {
+  0% {
+    opacity: 1;
+  }
+  4% {
+    opacity: .3;
+  }
+  8% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  22% {
+    opacity: .3;
+  }
+  24% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blinking3 {
+  0% {
+    opacity: 1;
+    top: 0;
+    left: 0;
+    transform: scale(1);
+  }
+  2% {
+    opacity: 1;
+    top: -5px;
+    left: 0;
+    transform: scale(2);
+  }
+  4% {
+    opacity: .5;
+    top: 3px;
+    left: -2px;
+    transform: scale(1);
+  }
+  6% {
+    opacity: 1;
+    top: 0;
+    left: 0;
+    transform: scale(1);
+  }
+}
+
+@keyframes blinking4 {
+  0% {
+    opacity: 1;
+  }
+
+  10% {
+    opacity: .3;
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  30% {
+    opacity: .3;
+  }
+
+  35% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
   }
 }

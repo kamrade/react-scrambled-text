@@ -1,18 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { ScrambledTextProps } from "./ScrambledText.props";
-import s from './ScrambledText.module.css';
-import { prepareTransformationAttay } from './helpers/prepareTransformationArray';
+import { prepareTransformationArray } from './helpers/prepareTransformationArray';
 import { setFrames } from './helpers/setFrames';
+import { IQueue } from './helpers/types';
+import style from './ScrambledText.module.css';
 
-export interface IQueue {
-  from: string;
-  to: string;
-  start: number;
-  end: number;
-  char?: string;
-}
-
-export const ScrambledText: React.FC<ScrambledTextProps> = ({ value, slideLength = 2000}) => {
+export const ScrambledText: React.FC<ScrambledTextProps> = ({ 
+  value, 
+  slideLength = 4000, 
+  postAnimate,
+  postAnimateSensetivity = 4
+}) => {
 
   let chars = '![]#____________![]#____________';
   let resolved: any; // resolve function from Promise
@@ -33,7 +31,7 @@ export const ScrambledText: React.FC<ScrambledTextProps> = ({ value, slideLength
   }
 
   const setText = (prevText: string, newText: string ) => {
-    queue = prepareTransformationAttay(prevText, newText);
+    queue = prepareTransformationArray(prevText, newText);
     cancelAnimationFrame(frameRequest);
     frame = 0;
     update();
@@ -48,11 +46,21 @@ export const ScrambledText: React.FC<ScrambledTextProps> = ({ value, slideLength
     frame++;
   }
 
+  const getAnimationClassName = () => {
+    let sensitivity = postAnimateSensetivity < 4 ? 4 : postAnimateSensetivity;
+    let randomIndex = Math.floor(Math.random() * sensitivity);
+    return postAnimate
+      ? `${style.togo} ${style['togo-' + randomIndex] || 'togo-empty'}`
+      : '';
+  }
+
   return (
-    <div className={s.ScrambledTextContainer}>
-      <div className={s.ScrambledText}>
+    <div className={'ScrambledTextContainer'}>
+      <div className={'ScrambledText'}>
         {outputState.split('').map((item, i) => (
-          <span className="togo" key={i}>{item}</span>
+          <span 
+            className={getAnimationClassName()} 
+            key={i}>{item}</span>
         ))}
       </div>
     </div>

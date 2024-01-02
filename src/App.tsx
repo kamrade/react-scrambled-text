@@ -11,11 +11,23 @@ function App() {
     '[ Business and system analytics ]'
   ]
 
+  let typewriterValues = [
+    '',
+    'Establish communication...',
+    'Establish communication. Done!',
+  ]
+
   return (
     <>
       <div className='App'>
-        <div className="scrambledTextWrapper">
-          <ScrambledText value={scrambledValues} />
+        <div className="scrambledTextWrapper" style={{ opacity: '0.5'}}>
+          <ScrambledText 
+            value={scrambledValues} 
+            slideLength={2000} 
+            postAnimate 
+            postAnimateSensetivity={10}
+          />
+          {/* <ScrambledText value={typewriterValues} /> */}
         </div>
       </div>
     </>
