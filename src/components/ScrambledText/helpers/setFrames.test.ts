@@ -8,7 +8,7 @@ test('should return correct value', () => {
   const queue = prepareTransformationArray(prevText, newText);
   queue[0].start = 10;
   queue[0].end = 20;
-  const [output, complete] = setFrames(queue, '___', 1);
+  const [output, _complete] = setFrames(queue, '___', 1);
   
   expect(output.length).toEqual(newText.length);
 

@@ -11,12 +11,6 @@ function App() {
     '[ Business and system analytics ]'
   ]
 
-  let typewriterValues = [
-    '',
-    'Establish communication...',
-    'Establish communication. Done!',
-  ]
-
   return (
     <>
       <div className='App'>
