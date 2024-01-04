@@ -18,6 +18,8 @@ yarn add @kamrade/react-scrambled-text
 
 ## Example
 
+https://drive.google.com/file/d/1vcIwN03NzeqhwuDX6zoZZElr77VzSvze/view?usp=drive_link
+
 ```bash
 import { ScrambledText } from '@kamrade/react-scrambled-text';
 
