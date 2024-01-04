@@ -1,27 +1,48 @@
-# React + TypeScript + Vite
+# React Text Scrambler
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Simple and reusable text slider with glitchy animation. Best used with monospaced fonts. Not styled. Inherits theme, colors, font-family, font-size, etc.
 
-Currently, two official plugins are available:
+## Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The package can be installed via npm:
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+```bash
+npm install @kamrade/react-scrambled-text --save
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+or via yarn:
+
+```bash
+yarn add @kamrade/react-scrambled-text
+```
+
+## Example
+
+```bash
+import { ScrambledText } from '@kamrade/react-scrambled-text';
+
+const value: string[] = [ 'Establish communication', 'Connecting to the server', 'Loading data'];
+
+<ScrambledText
+   value={value}
+   slideLength={2000}
+   postAnimate
+   postAnimateSensetivity={50}
+>
+```
+
+value = text for rendering
+slideLength = how long each slide will be visible
+postAnimate = after each slide change animation can be extended. Or not
+postAnimateSensetivity = play with this number to diferenciate post animation. Less number – more detailed animation
+
+## Roadmap
+
+### Components
+
+- [ ] Mosaic component
+- [ ] Typewriter
+
+### Text Scrambler
+
+[ ] -
