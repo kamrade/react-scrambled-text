@@ -33,10 +33,10 @@ const value: string[] = [ 'Establish communication', 'Connecting to the server',
 >
 ```
 
-value = text for rendering
-slideLength = how long each slide will be visible
-postAnimate = after each slide change animation can be extended. Or not
-postAnimateSensetivity = play with this number to diferenciate post animation. Less number – more detailed animation
+- value = text for rendering
+- slideLength = how long each slide will be visible
+- postAnimate = after each slide change animation can be extended. Or not
+- postAnimateSensetivity = play with this number to diferenciate post animation. Less number – more detailed animation
 
 ## Roadmap
 
